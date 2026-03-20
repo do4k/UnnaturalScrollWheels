@@ -23,6 +23,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
             UserDefaults.standard.set(false, forKey: "FirstLaunch")
         }
         self.statusItem.menu = self.menu
+        
+        // Add support link to menu
+        let supportItem = NSMenuItem(title: "Support this Project...", action: #selector(openSupportPage), keyEquivalent: "")
+        supportItem.target = self
+        menu?.insertItem(supportItem, at: 2)
+        
         refresh()
         let trusted = AXIsProcessTrusted()
         if trusted {
@@ -82,6 +88,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     @IBAction func showAbout(_ sender: Any) {
         NSApp.activate(ignoringOtherApps: true)
         NSApp.orderFrontStandardAboutPanel(sender)
+    }
+    
+    @objc func openSupportPage() {
+        if let url = URL(string: "https://ko-fi.com/danxoak") {
+            NSWorkspace.shared.open(url)
+        }
     }
     
     func showPreferences() // called from menu item
