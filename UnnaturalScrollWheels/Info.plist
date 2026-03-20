@@ -27,7 +27,7 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2020 Theron Tjapkes. All rights reserved.</string>
+	<string>Originally by Theron Tjapkes. Fork by Dan Oak.</string>
 	<key>NSAppleEventsUsageDescription</key>
 	<string>Used to request Accessibility permission and manage input for scroll wheel customization.</string>
 	<key>NSMainStoryboardFile</key>
