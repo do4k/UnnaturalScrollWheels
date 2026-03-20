@@ -26,7 +26,8 @@ Unfortunately most/all solutions no longer work reliably if at all in Catalina.
 ### Using Homebrew
 
 ```
-brew install --cask unnaturalscrollwheels
+brew tap do4k/tap
+brew install --cask unnaturalscrollwheels-do4k
 ```
 
 ### Manual download
